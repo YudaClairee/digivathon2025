@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digivathon</title>
+    <!-- TAILWIND -->
+    <link rel="stylesheet" href="output.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body class="font-['Poppins']">
+    <header
+      class="flex justify-between items-center px-4 md:px-16 py-3 md:py-5 fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-200"
+    >
+      <img src="./assets/logo.png" width="120" height="120" alt="logo" />
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 text-lg">
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors">About</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors"
+              >Timeline</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors"
+              >Benefit</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors"
+              >Partnership</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-[#465F5D] transition-colors">FaQ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Register Button -->
+      <button
+        class="hidden md:block bg-[#465F5D] text-white font-bold px-8 py-3 rounded-3xl hover:bg-[#374E4C] transition-colors"
+      >
+        Register Now!
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        id="hamburger-btn"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 relative"
+      >
+        <span
+          class="hamburger-line absolute w-6 h-0.5 bg-[#465F5D] transition-all duration-300 ease-in-out"
+          style="top: calc(50% - 6px)"
+        ></span>
+        <span
+          class="hamburger-line absolute w-6 h-0.5 bg-[#465F5D] transition-all duration-300 ease-in-out"
+          style="top: calc(50% - 1px)"
+        ></span>
+        <span
+          class="hamburger-line absolute w-6 h-0.5 bg-[#465F5D] transition-all duration-300 ease-in-out"
+          style="top: calc(50% + 4px)"
+        ></span>
+      </button>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div
+        id="mobile-menu"
+        class="absolute top-full left-0 right-0 bg-white shadow-lg border-b border-gray-200 hidden md:hidden"
+      >
+        <nav class="px-4 py-6">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >Timeline</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >Benefit</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >Partnership</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-lg text-[#374E4C] hover:text-[#465F5D] transition-colors py-2"
+                >FaQ</a
+              >
+            </li>
+          </ul>
+          <button
+            class="w-full mt-6 bg-[#465F5D] text-white font-bold px-8 py-3 rounded-3xl hover:bg-[#374E4C] transition-colors"
+          >
+            Register Now!
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="relative grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-20 py-6 min-h-screen pt-20 md:pt-6"
+    >
+      <div class="relative space-y-4 order-2 md:order-1">
+        <img
+          src="./assets/elements1.svg"
+          class="absolute -top-5 md:-top-10 left-0 w-16 md:w-auto"
+          alt="hero"
+        />
+        <h1
+          class="text-4xl md:text-6xl font-bold text-[#062D2C] leading-[1.15]"
+        >
+          Digital Business Horizons Innovation Contest
+        </h1>
+        <p class="text-lg md:text-2xl text-[#374E4C] font-semibold mb-6">
+          "Business Beyond the Upside Down: Unravel Challenges, Ignite
+          Innovation"
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <button
+            class="bg-[#465F5D] text-white font-bold px-6 py-2 md:px-8 md:py-3 rounded-3xl text-sm md:text-base"
+          >
+            Guidebook!
+          </button>
+          <button
+            class="bg-[#465F5D] text-white font-bold px-6 py-2 md:px-8 md:py-3 rounded-3xl text-sm md:text-base"
+          >
+            Register Here!
+          </button>
+        </div>
+      </div>
+      <div
+        class="relative flex justify-center items-center order-1 md:order-2 mb-4 md:mb-0"
+      >
+        <!-- Element 2 - positioned top left -->
+        <img
+          src="./assets/element4.svg"
+          alt="hero"
+          class="absolute top-2 md:top-4 -left-3 md:-left-6 w-8 md:w-auto"
+        />
+
+        <!-- Element 3 - positioned top right -->
+        <img
+          src="./assets/element3.svg"
+          alt="hero"
+          class="absolute top-2 md:top-3 right-3 md:right-6 w-8 md:w-auto"
+        />
+
+        <!-- Main logo in center -->
+        <img src="./assets/logohero.png" alt="hero" class="z-10 md:w-[500px]" />
+
+        <!-- Element 4 - positioned bottom right -->
+        <img
+          src="./assets/element2.svg"
+          alt="hero"
+          class="absolute bottom-4 md:bottom-8 -right-1 md:-right-2 w-8 md:w-auto"
+        />
+      </div>
+      <img
+        src="./assets/border-hero.svg"
+        class="absolute bottom-0 left-0 md:left-3 w-screen"
+        alt="hero"
+      />
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="px-4 md:px-20 py-6 md:py-8 space-y-4">
+      <h2
+        class="text-3xl md:text-5xl font-bold text-[#062D2C] text-center my-8 md:my-12"
+      >
+        About Digivathon
+      </h2>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0"
+      >
+        <img
+          src="./assets/elementabout1.png"
+          alt="About"
+          class="w-full md:w-auto max-w-sm md:max-w-none"
+        />
+        <div class="space-y-4 flex flex-col w-full md:w-2/3">
+          <h3 class="text-lg md:text-xl text-[#062D2C]">
+            What will you get when register in
+            <span class="text-[#465F5D] font-bold">Digivathon?</span>
+          </h3>
+          <div class="flex items-start md:items-center gap-4">
+            <img
+              src="./assets/talkshow.png"
+              alt=""
+              class="w-12 md:w-auto flex-shrink-0"
+            />
+            <div class="">
+              <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+                Talkshow
+              </h4>
+              <p class="text-sm md:text-md text-[#374E4C]">
+                Participant must attend the talkshow held online via zoom
+                meeting on July 30, 2025.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start md:items-center gap-4">
+            <img
+              src="./assets/workshop.png"
+              alt=""
+              class="w-12 md:w-auto flex-shrink-0"
+            />
+            <div>
+              <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+                Business Case Work
+              </h4>
+              <p class="text-sm md:text-md text-[#374E4C]">
+                Each team works on the business case given in the WhatsApp Group
+                according to the specified time.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start md:items-center gap-4">
+            <img
+              src="./assets/ideathon.png"
+              alt=""
+              class="w-12 md:w-auto flex-shrink-0"
+            />
+            <div>
+              <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+                Final Pitching
+              </h4>
+              <p class="text-sm md:text-md text-[#374E4C]">
+                The best seven teams will proceed to the final round and must
+                pitch the business case solution that has been given. It will
+                held on August 18, 2025.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY DIGIVATHON SECTION -->
+    <section class="px-4 md:px-20 py-6 md:py-8 space-y-4">
+      <h2
+        class="text-3xl md:text-5xl font-bold text-[#062D2C] text-center my-8 md:my-12 leading-[1.15] mb-6"
+      >
+        Why You Should Join <br />the Digivathon?
+      </h2>
+      <p
+        class="text-center text-base md:text-lg text-[#374E4C] font-semibold w-full md:w-1/2 mx-auto px-4 md:px-0"
+      >
+        Attending Digivathon is a great way to challenge yourself, gain
+        practical experience, and contribute to the development of innovative
+        solutions to real-world problems.
+      </p>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full md:w-1/2 mx-auto px-4 md:px-0"
+      >
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/learning.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Learning
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Digivathon provide a valuable learning experience where you can
+              learn from experienced professionals and mentors.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/networking.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Networking
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              You will have the chance to network with other like-minded
+              individuals, mentors, and industry experts.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/prizes.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Fun and Rewarding Experience
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Participating in Digivathon can be a fun and rewarding experience
+              where you can work in a team, receive recognition, and even win
+              prizes.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/creativity.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Boosting Creativity
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Digivathon encourage creativity in finding innovative solutions to
+              complex problems.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/collaboration.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Improve Collaboration Skills
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Digivathon involve working in teams to achieve a common goal,
+              which can help improve collaboration and communication skills.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="mx-auto w-16 md:w-auto"
+            src="./assets/problemsolving.svg"
+            alt=""
+          />
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-[#374E4C]">
+              Sharpen Problem-Solving Skills
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Digivathon present complex challenges, which can help sharpen
+              creative and innovative problem-solving skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="px-4 md:px-20 py-8 md:py-12 space-y-4">
+      <div
+        class="flex flex-col md:flex-row md:justify-between justify-center items-center w-full md:w-4/5 mx-auto min-h-[50vh] md:h-screen gap-6"
+      >
+        <h2 class="text-3xl md:text-5xl font-semibold text-center md:text-left">
+          Innovation meets collaboration in Digivathon
+        </h2>
+        <div
+          class="border-l-0 md:border-l-4 border-t-4 md:border-t-0 border-[#465F5D] pl-0 md:pl-8 pt-4 md:pt-0 w-full md:h-1/3 flex items-center"
+        >
+          <h3
+            class="text-lg md:text-xl text-[#374E4C] text-center md:text-left"
+          >
+            "Those who do not dare to take challenges and do not dare to take
+            opportunities are the characteristics of people afraid of failure."
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section class="px-4 md:px-20 py-6 md:py-8 space-y-6">
+      <div
+        class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0"
+      >
+        <img
+          src="./assets/timeline.png"
+          alt=""
+          class="w-full md:w-auto max-w-sm md:max-w-none"
+        />
+        <div class="space-y-4 text-center md:text-left">
+          <h3 class="text-2xl md:text-4xl font-bold">Event Timeline</h3>
+          <p class="text-lg md:text-xl text-[#374E4C] w-full md:w-4/5">
+            In Digivathon activities, there are several series of events
+            starting from
+            <span class="font-bold"
+              >Registration, Talkshows, working on the business case,</span
+            >
+            to the top event namely the
+            <span class="font-bold">'Final Pitching'</span>. for more details
+            please click the button below
+          </p>
+          <a href="timeline.html">
+            <button
+              class="bg-[#465F5D] text-white font-bold px-6 py-2 md:px-8 md:py-3 rounded-3xl text-sm md:text-base"
+            >
+              Check Timeline
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- benefit section -->
+    <section class="px-4 md:px-20 py-6 md:py-8 space-y-4">
+      <div class="md:ml-12 w-full md:w-1/2 text-center md:text-left">
+        <h3 class="text-2xl md:text-4xl font-bold text-[#062D2C]">
+          Benefits of Participating in Digivathon.
+        </h3>
+        <p class="text-lg md:text-xl text-[#374E4C]">
+          By participating in Digivathon activities, you will get a lot of
+          benefits as follows:
+        </p>
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-1/2">
+          <div class="text-center md:text-left">
+            <img
+              src="./assets/winner.svg"
+              alt=""
+              class="mx-auto md:mx-0 w-16 md:w-auto"
+            />
+            <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+              Winning Prizes
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Participants have theopportunity to win prizes of up to millions
+              of money.
+            </p>
+          </div>
+          <div class="text-center md:text-left">
+            <img
+              src="./assets/certificate.svg"
+              alt=""
+              class="mx-auto md:mx-0 w-16 md:w-auto"
+            />
+            <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+              Certificate
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              E-certificates are given to all Digivathon participants.
+            </p>
+          </div>
+          <div class="text-center md:text-left">
+            <img
+              src="./assets/relation.svg"
+              alt=""
+              class="mx-auto md:mx-0 w-16 md:w-auto"
+            />
+            <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+              Relation
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              You will get lots of connections to mentors, industry experts and
+              other participants.
+            </p>
+          </div>
+          <div class="text-center md:text-left">
+            <img
+              src="./assets/experience.svg"
+              alt=""
+              class="mx-auto md:mx-0 w-16 md:w-auto"
+            />
+            <h4 class="text-xl md:text-2xl font-bold text-[#374E4C]">
+              Experience
+            </h4>
+            <p class="text-sm md:text-md text-[#374E4C]">
+              Valuable experience and knowledge in the professional world.
+            </p>
+          </div>
+        </div>
+        <img
+          src="./assets/benefit.png"
+          alt=""
+          class="w-full md:w-auto max-w-sm md:max-w-none"
+        />
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="px-4 md:px-20 py-12 md:py-16">
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-[#062D2C] text-center mb-8 md:mb-12"
+        >
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="1"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Apa saja rangkaian acara Digivathon?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="1"
+            >
+              <div class="text-gray-600 space-y-2">
+                <p>
+                  Terdapat tiga rangkaian acara utama pada Digivathon 2025,
+                  antara lain:
+                </p>
+                <ol class="list-decimal list-inside space-y-1 ml-4">
+                  <li>Talkshow</li>
+                  <li>Pengerjaan business case</li>
+                  <li>Final pitching day</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="2"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Kapan pendaftaran Digivathon dimulai?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="2"
+            >
+              <div class="text-gray-600">
+                <p>
+                  Pendaftaran Digivathon 2025 dimulai pada tanggal 24 Juni-18
+                  Juli 2025.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="3"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Dimana pelaksanaan Digivathon 2025?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="3"
+            >
+              <div class="text-gray-600">
+                <p>
+                  Talkshow dan pengerjaan business case akan diselenggarakan
+                  secara <span class="font-semibold">online</span>. Final
+                  pitching day diselenggarakan secara
+                  <span class="font-semibold"
+                    >offline di Gedung Creative Center, Tasikmalaya</span
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="4"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Bagaimana cara mendaftar Digivathon?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="4"
+            >
+              <div class="text-gray-600 space-y-2">
+                <ol class="list-decimal list-inside space-y-1">
+                  <li>Kunjungi website www.digivathon.site</li>
+                  <li>Klik Pendaftaran pada laman website</li>
+                  <li>Isi formulir pendaftaran sesuai ketentuan</li>
+                  <li>Peserta akan diarahkan ke WhatsApp Group Digivathon</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="5"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Apakah Digivathon terdapat biaya pendaftaran?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="5"
+            >
+              <div class="text-gray-600 space-y-2">
+                <p>
+                  Ya, biaya pendaftaran sebesar Rp 75.000,00 untuk 1 tim
+                  beranggotakan 3 orang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="6"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Apakah pendaftaran harus per tim?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="6"
+            >
+              <div class="text-gray-600 space-y-2">
+                <p>
+                  Ya, satu tim terdiri dari 3 orang pelajar SMA/sederajat
+                  dan/atau mahasiswa/i aktif D3/D4/S1 di Indonesia. Anggota tim
+                  boleh berasal dari sekolah, kampus, maupun jenjang pendidikan
+                  yang berbeda.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="bg-[#F3F3F3] rounded-lg shadow-sm border border-gray-200">
+            <button
+              class="faq-button w-full px-4 md:px-8 py-4 md:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+              data-faq="7"
+            >
+              <span class="text-base md:text-lg font-semibold text-[#374E4C]"
+                >Dimana kita bisa mendapatkan informasi mengenai Digivathon
+                2025?</span
+              >
+              <svg
+                class="faq-icon w-5 h-5 text-[#465F5D] transform transition-transform duration-200 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="faq-content hidden px-4 md:px-6 pb-4"
+              data-faq-content="7"
+            >
+              <div class="text-gray-600 space-y-2">
+                <p>
+                  Informasi lebih lanjut dapat diakses pada media sosial
+                  Digivathon:
+                </p>
+                <ol class="list-decimal list-inside space-y-1 ml-4">
+                  <li>Instagram: @digivathon.upi</li>
+                  <li>Youtube: DIGIVATHON UPI</li>
+                  <li>Tiktok: DIGIVATHON UPI</li>
+                  <li>LinkedIn: DIGIVATHON UPI</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="px-4 md:px-20 py-12 md:py-16 border-t-2 border-[#062D2C]">
+      <div
+        class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0"
+      >
+        <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+          <h3 class="text-3xl md:text-5xl font-bold text-[#062D2C]">
+            Contact Us!
+          </h3>
+          <p class="text-lg md:text-2xl text-[#374E4C]">
+            If you need help or have a question, please contact the following:
+          </p>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href=""
+              ><img src="./assets/igdigivathon.svg" alt="" class="md:w-auto"
+            /></a>
+            <a href=""
+              ><img src="./assets/wadigivathon.svg" alt="" class="md:w-auto"
+            /></a>
+          </div>
+        </div>
+        <img
+          class="w-full md:w-[30rem] max-w-sm md:max-w-none"
+          src="./assets/contactus.svg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-[#3a605d] text-white px-10 py-10 md:px-20 md:py-16">
+      <div class="max-w-6xl mx-auto">
+        <!-- Main Footer Content -->
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-8 space-y-8 lg:space-y-0"
+        >
+          <!-- Logo and Company Name -->
+          <div class="text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+              <!-- Logo Boilerplate - Replace with actual logo -->
+              <img src="./assets/logodigivathonputih.png" width="250" alt="" />
+            </div>
+
+            <!-- Address -->
+            <div class="text-sm text-gray-200 space-y-1 max-w-xs">
+              <p>Bisnis Digital UPI | Jl. Lingkar Dadaha No.18,</p>
+              <p>Nagarawangi, Kec. Cihideung,</p>
+              <p>Tasikmalaya, Jawa Barat 46124</p>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="flex justify-center space-x-4">
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="fab fa-instagram text-[#465F5D] text-xl"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a
+              href="#"
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="fab fa-youtube text-[#465F5D] text-xl"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="fab fa-linkedin-in text-[#465F5D] text-xl"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              href="#"
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="fab fa-whatsapp text-[#465F5D] text-xl"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="#"
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="fab fa-tiktok text-[#465F5D] text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="border-t border-gray-400 pt-8 mb-8">
+          <nav
+            class="flex flex-wrap justify-center items-center lg:justify-center space-x-8 lg:space-x-12"
+          >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >Timeline</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >Benefit</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >Partnership</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-lg"
+              >FaQ</a
+            >
+          </nav>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-gray-300 text-sm">
+          <p>©Digivathon 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Add script tag before closing body -->
+    <script src="faq.js"></script>
+  </body>
+</html>
